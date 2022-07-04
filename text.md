@@ -18,3 +18,4 @@ Dialogue:
 So now, we have two different elements : {} and {{}}. We could build {{{}}}. Did we already saw them ? Well, for now, we only saw sets containing {}, never any containing {{}}. Since {{}} and {} are different (one contains {} and not the other), we never saw {{{}}} before. We could continue like that forever : {{{{}}}}, {{{{{}}}}}, ...
 We could also look closer to {{},{{}}}. An interview similar to those before yields that tey contains to elements: {} and {{}}.
 You may ask : what about {{},{}}? To what I'd say : but we've already seen them! They contain {}, and nothing else, so they are just {{}} in disguise.
+Finally, a bit of jargon rather than "this set contains this element", we often write element \in set
