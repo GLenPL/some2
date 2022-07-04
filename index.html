@@ -5,7 +5,52 @@
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	</head>
 	<body>
-	<h1>Extraordinary ordinals</h1>
-	<h2>How to count ?</h2>
+		<section id="principale">
+			<h1>
+				Extraordinary ordinals
+			</h1>
+			<h2>
+				How to count?
+			</h2>
+			<h3>
+				What do we even count? (an introduction to set theory)
+			</h3>
+			<p>
+				First things first, we need to discuss what it is that we study. We study things. Things have properties. Two things are said to be equal if every of there properties are equals. These two boxes are not equal : one is red, the other blue. But mathematical objects may not have any color. So, if we narrow our study to sets only, this becomes easier. The only properties a set can have is containing something. But, what is a set? Well, as its name seems to indicate, it can contains things.
+			</p>
+			<p>
+				Rather, it can contain or not contain things. Assume we have a set. You can always ask them if they contain something.
+			</p>
+			<div class="dialogue">
+				Dialogue with the empty set: <br/>
+				- (I) Do you contain [unreadable]? <br/>
+				- (S) No!
+			</div>
+			<p>
+				The thing is, whatever you ask the empty set if they contain it, the answer will always be no. In addition, rather than saying the empty set, we often write \(\emptyset\) or \(\{\}\).
+			</p>
+			<p>
+				Because we assumed the existence of \( \emptyset \), we now have an element : \(\emptyset\). So, we can put it in a set. Let's consider \(\{\emptyset\}\). Again, it we can ask talk to them.
+			</p>
+			<div class="dialogue">
+				Dialogue:<br/>
+				- (I) Do you contain an apple?<br/>
+				- (S) No!<br/>
+				- (I) Do you contain \emptyset?<br/>
+				- (S) Yes!
+			</div>
+			<p>
+				So now, we have two different elements : \( \{\} \) and \( \{\{\}\} \). We could build \( \{\{\{\}\}\} \). Did we already saw them ? Well, for now, we only saw sets containing \( \{\} \), never any containing \( \{\{\}\} \). Since {{}} and \( \{\} \) are different (one contains \( \{\} \) and not the other), we never saw \( \{\{\{\}\}\} \) before. We could continue like that forever : \( \{\{\{\{\}\}\}\} \), \( \{\{\{\{\{\}\}\}\}\} \), ...
+			</p>
+			<p>
+			We could also look closer to \( \{ \emptyset,\{ \emptyset \}\} \). An interview similar to those before yields that they contains two elements: \(\emptyset\) and \( \{ \emptyset \} \).
+			<p>
+			</p>
+				You may ask : what about \( \{ \emptyset, \emptyset \} \)? To what I'd say : but we've already seen them! They contain \( \emptyset \), and nothing else, so they are just \( \{ \emptyset \} \) in disguise.
+			</p>
+			<p>
+				Finally, a bit of jargon rather than "this set contains this element", we often write \( \mathrm{element} \in \mathrm{set} \)
+			</p>
+		</section>
 	</body>
 </html>
