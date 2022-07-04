@@ -1,0 +1,22 @@
+:root{
+	--couleur-principale: #d8d8f8;
+	--couleur-vert-1: #d8f0b0;
+	--couleur-rouge-1: #f0c8b0;
+	--couleur-gris-1: #f8f8f8;
+	--couleur-gris-2: #efefef;
+	--couleur-gris-3: #404040;
+	--couleur-gris-4: #242450;
+}
+
+body{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+
+#principal{
+	width: 50%;
+	background-color: var(--couleur-gris-1);
+	padding: 1em
+}
