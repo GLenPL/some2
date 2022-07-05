@@ -18,15 +18,18 @@
 			</h3>
 			<div class="text">
 				<p>
-					First things first, we need to discuss what it is that we study. We study things. Things have properties. Two things are said to be equal if every of there properties are equals. These two boxes are not equal : one is red, the other blue. But mathematical objects may not have any color. So, if we narrow our study to sets only, this becomes easier. The only properties a set can have is containing something. But, what is a set? Well, as its name seems to indicate, it can contains things.
+					First things first, we need to discuss what it is that we study. We study things. Things have properties. Two things are said to be equal if every of there properties are equals. An apple and a blueberry are not equal : one is green and big, the other blue and small. There color and size properties differ. But mathematical objects may not have any color, or <span title="well, as we will find out, sets can have sizes">size</span>. So, if we narrow our study to collections only, this becomes easier. The only properties a collection can have are about ownership: is [something] in our collection? But, what is a collection? Well, as its name seems to indicate, it can contains things.
 				</p>
 				<p>
-					Rather, it can contain or not contain things. Assume we have a set. You can always ask them if they contain something.
+					Rather, we can accept that a collection is defined by these ownership properties only. If two collections contains exactly the same things, then they are equal.
+				</p>
+				<p>
+					Assume we have a collection. You can always ask them if they contain something.
 				</p>
 			</div>
 			<div class="dialogue">
-				Dialogue with the empty set: <br/>
-				- (I) Do you contain [unreadable]? <br/>
+				Dialogue with the empty set, the collection containing nothing: <br/>
+				- (I) Do you contain [something]? <br/>
 				- (S) No!
 			</div>
 			<div class="text">
@@ -34,7 +37,7 @@
 				The thing is, whatever you ask the empty set if they contain it, the answer will always be no. In addition, rather than saying the empty set, we often write \(\emptyset\) or \(\{\}\).
 			</p>
 			<p>
-				Because we assumed the existence of \( \emptyset \), we now have an element : \(\emptyset\). So, we can put it in a set. Let's consider \(\{\emptyset\}\). Again, it we can ask talk to them.
+				Because we assumed the existence of \( \emptyset \), we now have an element : \(\emptyset\). So, we can put it in a collection. Let's consider \(\{\emptyset\}\), the collection containing only \( \emptyset \). Again, it we can talk to them.
 			</p>
 		</div>
 			<div class="dialogue">
@@ -49,7 +52,7 @@
 				So now, we have two different elements : \( \emptyset \) and \( \{ \emptyset \} \). We could build \( \{\{ \emptyset \}\} \). Did we already saw them ? Well, for now, we only saw sets containing \( \emptyset \), never any containing \( \{\emptyset\} \). Since \( \{\emptyset\} \) and \( \emptyset \) are different (one contains \( \emptyset \) and not the other), we never saw \( \{\{\emptyset\}\} \) before. We could continue like that forever : \( \{\{\{ \emptyset \}\}\} \), \( \{\{\{\{ \emptyset \}\}\}\} \), ...
 			</p>
 			<p>
-			We could also look closer to \( \{ \emptyset,\{ \emptyset \}\} \). An interview similar to those before yields that they contains two elements: \(\emptyset\) and \( \{ \emptyset \} \).
+			We could also take a closer look to \( \{ \emptyset,\{ \emptyset \}\} \). An interview similar to those before yields that they contains two elements: \(\emptyset\) and \( \{ \emptyset \} \).
 			<p>
 			</p>
 				You may ask : what about \( \{ \emptyset, \emptyset \} \)? To what I'd say : but we've already seen them! They contain \( \emptyset \), and nothing else, so they are just \( \{ \emptyset \} \) in disguise.
@@ -57,7 +60,12 @@
 		</div>
 			<div class="note">
 			<p>
-				Finally, a bit of jargon: rather than "this set contains this element", we often write \( \mathrm{element} \in \mathrm{set} \)
+				A bit of jargon: rather than "this set contains this element", we often write \( \mathrm{element} \in \mathrm{set} \)
+			</p>
+		</div>
+		<div class="note">
+			<p>
+				Note that we can name things. Let's call \( a := \{ \emptyset \} \). Here, \( := \) means "let's give the right-hand part the name on the left-hand". Now, what I've called \( a \) and \( \{ \emptyset \} \) are equal (by definition), but also \( \{ a, \emptyset \} \) and \( \{ \{ \emptyset \}, \emptyset \} \). In that case, we use the symbol \( = \).
 			</p>
 		</div>
 		</section>
