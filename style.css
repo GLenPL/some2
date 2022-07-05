@@ -8,6 +8,22 @@
 	--couleur-gris-4: #242450;
 }
 
+*{
+	color: var(--couleur-gris-4);
+	font-size: 1em;
+}
+
+h1{
+	font-size: 300%;
+}
+h2{
+	font-size: 200%;
+}
+h3{
+	font-size: 150%;
+}
+
+
 body{
 	display: flex;
 	flex-direction: row;
@@ -17,16 +33,50 @@ body{
 
 #principale{
 	width: 50%;
-	background-color: var(--couleur-gris-1);
+	background-color: var(--couleur-gris-2);
 	padding: 1em;
 
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
 
 }
 
-#principale :is(h1, h2,h3){
+#principale>div{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+#principale :is(h1, h2, h3){
 	text-align: center;
+	width: 90%;
+}
+
+:is(.text, .dialogue, .note){
+	width: 45%;
+	padding: 1%;
+	margin: 1%;
+	border: 1px solid var(--couleur-gris-1);
+	border-radius: 1.5em;
+
+	text-align: justify;
+
+	transition: all 1s;
+}
+:is(.text, .dialogue, .note):hover{
+	border-radius: 0em;
+}
+
+.text:hover{
+	border-color: var(--couleur-principale);
+}
+.dialogue:hover{
+	border-color: var(--couleur-vert-1);
+}
+.note:hover{
+	border-color: var(--couleur-rouge-1);
 }

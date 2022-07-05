@@ -1,72 +1,117 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8"	/>
   	<title>SoME2 : Extraordinary ordinals</title>
+		<script>
+			MathJax = {
+				tex: {
+					inlineMath: [["$","$"], ["\\(","\\)"]]
+				}
+			}
+		</script>
 		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 		<link rel="stylesheet" href="style.css"/>
 	</head>
-	<body>
+
+	<body lang="en">
 		<section id="principale">
 			<h1>
 				Extraordinary ordinals
 			</h1>
-			<h2>
-				How to count?
+			<!-- <h2>
+				What to count? (an unnecessary preamble)
 			</h2>
+			<div id="set-theory">
 			<h3>
-				What do we even count? (an introduction to set theory)
+				What are we even going to count? (consider this an introduction)
 			</h3>
 			<div class="text">
-				<p>
-					First things first, we need to discuss what it is that we study. We study things. Things have properties. Two things are said to be equal if every of there properties are equals. An apple and a blueberry are not equal : one is green and big, the other blue and small. There color and size properties differ. But mathematical objects may not have any color, or <span title="well, as we will find out, sets can have sizes">size</span>. So, if we narrow our study to collections only, this becomes easier. The only properties a collection can have are about ownership: is [something] in our collection? But, what is a collection? Well, as its name seems to indicate, it can contains things.
-				</p>
-				<p>
-					Rather, we can accept that a collection is defined by these ownership properties only. If two collections contains exactly the same things, then they are equal.
-				</p>
-				<p>
-					Assume we have a collection. You can always ask them if they contain something.
-				</p>
-			</div>
-			<div class="dialogue">
-				Dialogue with the empty set, the collection containing nothing: <br/>
-				- (I) Do you contain [something]? <br/>
-				- (S) No!
+				First things first, we need to discuss what it is that we study. We study things. Things have properties. Two things are said to be equal if every of there properties are equals. An apple and a blueberry are not equal : one is green and big, the other blue and small. There color and size properties differ. On the contrary, a banana and itself are equal: all their properties are indistinguishable (curviture, position, color, size, taste, ...).
 			</div>
 			<div class="text">
-			<p>
+				But mathematical objects may not have any color, or <span title="well, as we will find out, sets can have sizes">size</span>. So, if we narrow our study to collections only, this becomes easier. The only properties a collection can have are about ownership: is [something] in our collection? But, what is a collection? Well, as its name seems to indicate, it is a thing that can contains things.
+			</div>
+			<div class="text">
+				Rather, we can accept that a collection is defined by these ownership properties only. Thus, if two collections contains exactly the same things, then they are equal. Moreover, collections being things means that a collection can be in an other one.
+			</div>
+			<div class="dialogue" title="Dialogue with the empty set">
+				Dialogue with the empty set, the collection containing nothing: <br/>
+				- Do you contain [something]? <br/>
+				- No!
+			</div>
+			<div class="text">
 				The thing is, whatever you ask the empty set if they contain it, the answer will always be no. In addition, rather than saying the empty set, we often write \(\emptyset\) or \(\{\}\).
-			</p>
-			<p>
+			</div>
+			<div class="text">
 				Because we assumed the existence of \( \emptyset \), we now have an element : \(\emptyset\). So, we can put it in a collection. Let's consider \(\{\emptyset\}\), the collection containing only \( \emptyset \). Again, it we can talk to them.
-			</p>
-		</div>
+			</div>
 			<div class="dialogue">
 				Dialogue:<br/>
-				- (I) Do you contain an apple?<br/>
-				- (S) No!<br/>
-				- (I) Do you contain \emptyset?<br/>
-				- (S) Yes!
+				- Do you contain an apple?<br/>
+				- No!<br/>
+				- Do you contain \emptyset?<br/>
+				- Yes!
 			</div>
 			<div class="text">
-			<p>
 				So now, we have two different elements : \( \emptyset \) and \( \{ \emptyset \} \). We could build \( \{\{ \emptyset \}\} \). Did we already saw them ? Well, for now, we only saw sets containing \( \emptyset \), never any containing \( \{\emptyset\} \). Since \( \{\emptyset\} \) and \( \emptyset \) are different (one contains \( \emptyset \) and not the other), we never saw \( \{\{\emptyset\}\} \) before. We could continue like that forever : \( \{\{\{ \emptyset \}\}\} \), \( \{\{\{\{ \emptyset \}\}\}\} \), ...
-			</p>
-			<p>
-			We could also take a closer look to \( \{ \emptyset,\{ \emptyset \}\} \). An interview similar to those before yields that they contains two elements: \(\emptyset\) and \( \{ \emptyset \} \).
-			<p>
-			</p>
+			</div>
+			<div class="text">
+				We could also take a closer look to \( \{ \emptyset,\{ \emptyset \}\} \). An interview similar to those before yields that they contains two elements: \(\emptyset\) and \( \{ \emptyset \} \).
+			</div>
+			<div class="text">
 				You may ask : what about \( \{ \emptyset, \emptyset \} \)? To what I'd say : but we've already seen them! They contain \( \emptyset \), and nothing else, so they are just \( \{ \emptyset \} \) in disguise.
-			</p>
-		</div>
+			</div>
 			<div class="note">
-			<p>
-				A bit of jargon: rather than "this set contains this element", we often write \( \mathrm{element} \in \mathrm{set} \)
-			</p>
-		</div>
-		<div class="note">
-			<p>
-				Note that we can name things. Let's call \( a := \{ \emptyset \} \). Here, \( := \) means "let's give the right-hand part the name on the left-hand". Now, what I've called \( a \) and \( \{ \emptyset \} \) are equal (by definition), but also \( \{ a, \emptyset \} \) and \( \{ \{ \emptyset \}, \emptyset \} \). In that case, we use the symbol \( = \); we could say \( \{ a, \emptyset \} = \{ \{ \emptyset \}, \emptyset \} \)
-			</p>
+				A bit of jargon: rather than "this collection contains this element", we often write \( \mathrm{element} \in \mathrm{collection} \).
+			</div>
+			<div class="note">
+					Note that we can name things. Let's call \( a := \{ \emptyset \} \). Here, \( := \) means "let's give the right-hand part the name on the left-hand". Now, what I've called \( a \) and \( \{ \emptyset \} \) are equal (by definition), but also \( \{ a, \emptyset \} \) and \( \{ \{ \emptyset \}, \emptyset \} \). In that case, we use the symbol \( = \); we could say \( \{ a, \emptyset \} = \{ \{ \emptyset \}, \emptyset \} \)
+			</div>
+			<h3>
+				Sets over collections (an introduction to set theory)
+			</h3>
+			<div class="text">
+				We may seem to be in no position to be unhappy, yet we should. The main issue here is that with no further limitation of what we will consider as a good set, paradoxes are down the road.
+			</div>
+			<div class="text">
+				You may consider the collection of all collection: it contains itself. Weird, but OK. But what about all the collections that does not contain themselves: they form a collection (call it \( A \)). But then, do we have \(A \in A\) or \(A \notin A\)? Well, here is our first issue.
+			</div>
+			<div class="text">
+				In order to adress this, one deals with sets and classes. The former are tamed and quite reasonnable, but the latter are wild and bizarre. A set can be seen as a special class, one that has been built according to some rules. A class is ... a class.
+			</div>
+			<div class="text">
+				The class of all sets exists, but it is not a set. On the other hand, the class of all classes does not exists, because a class can only contain sets.
+			</div>
+		</div>-->
+		<div id="how-to-count">
+		<h2>
+			How to count?
+		</h2>
+		<h3>
+			Orders!
+		</h3>
+			<div class="text">
+				When counting, one gives an order to things. There is the first thing, the second thing, the third thing, ... and sometimes, when there is nothing at all, there is a total of zero things. As you notice, counting in intrisincally bonded to the idea of order.
+			</div>
+			<div class="text">
+				Not any orders, in fact! When dealing with finite sets, only those which are total orders allows to count. By this, we mean orders on a set such that every two elements $a$ and $b$ are in relation: either $a < b$, $a > b$ or $a = b$. This may seem like an unnecessary remark, but the study of partial orders is particularly interesting (but we won't deal with them here).
+			</div>
+			<div class="text">
+				Let's now look at a few particular sets. The zeroth one is $A_0 := \emptyset$, the first one $A_1 := \{\emptyset\}$, the second $A_2 := \{\emptyset, \{\emptyset\}\}$ and the $(n+1)$-th is the set containing all the previous ones, that is $A_{n+1} := \{A_1, A_2, \dots, A_n\}$. You first notice that if $n < m$, then $A_n \in A_m$ (read: $A_n$ is in $A_m$ or $A_m$ is an element of $A_m$).
+			</div>
+			<div class="text">
+				  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0, A_1, \dots$, let's say that these are the natural numbers.
+			</div>
+			<div class="text">
+				Why would we do that? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) a here, we just have a nice recipe!
+			</div>
+			<!--<div class="text">
+				Let's take two sets, say $A := \{ \alpha, \beta, \gamma \}$ and $B := \{ \delta, \epsilon \}$. Let's give each of them a total order, something like $\alpha < \beta < \gamma$ and the order $\delta < \epsilon$ for $B$. That is, $\alpha$ is the first element of $A$, $\beta$ the second and $\gamma$ the third; while $\delta$ is the first and $\epsilon$ the last element of $B$. We can now take the function $f : B \to A$ such that $f(\delta) = \beta$ and $f(\epsilon) = \gamma$.
+			</div>
+			<div class="text">
+				"We could totally do that, but why would we?" you think? Because it is an order-preserving function, also called order isomorphism (or just simply isomorphism when there are no ambiguity). This means that if $x$ and $y$ are elements of $B$ with $x < y$, then $f(x) < f(y)$
+			</div>-->
 		</div>
 		</section>
 	</body>
