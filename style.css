@@ -18,5 +18,15 @@ body{
 #principale{
 	width: 50%;
 	background-color: var(--couleur-gris-1);
-	padding: 1em
+	padding: 1em;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+#principale :is(h1, h2,h3){
+	text-align: center;
 }
