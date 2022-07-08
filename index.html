@@ -98,20 +98,72 @@
 				Not any orders, in fact! When dealing with finite sets, only those which are total orders allows to count. By this, we mean orders on a set such that every two elements $a$ and $b$ are in relation: either $a < b$, $a > b$ or $a = b$. This may seem like an unnecessary remark, but the study of partial orders is particularly interesting (but we won't deal with them here).
 			</div>
 			<div class="text">
-				Let's now look at a few particular sets. The zeroth one is $A_0 := \emptyset$, the first one $A_1 := \{\emptyset\}$, the second $A_2 := \{\emptyset, \{\emptyset\}\}$ and the $(n+1)$-th is the set containing all the previous ones, that is $A_{n+1} := \{A_1, A_2, \dots, A_n\}$. You first notice that if $n < m$, then $A_n \in A_m$ (read: $A_n$ is in $A_m$ or $A_m$ is an element of $A_m$).
+				One order is good, but two is better! Consider the usual ones on $\{0,1,2\}$ and $\{3,4,5\}$? They look different, but are pretty similar: they both have elements, both have a first, second and third element and both doesn't have a fourth element. In fact, they are said to be isomorphic, i.e. up to a change of label, they are identical.
 			</div>
 			<div class="text">
-				  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0, A_1, \dots$, let's say that these are the natural numbers.
+				Before moving on, let's ask ourselves what we like when we count. If we are to generalize counting, we need to get rid of a few properties and, most importantly, to keep some. When we count in the usual set $\mathbb{N}$ of the natural integer, we notice something: every subset $S$ of $\mathbb{N}$ has a least element (i.e. an element less than any other element in $S$). So, we may want to go with that: every order we'll consider will have this property, and we will call them well-orders.
 			</div>
 			<div class="text">
-				Why would we do that? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) a here, we just have a nice recipe!
+				We may now try to find a classification of these order, and for each class, a quintessential order. In fact, we'll do the opposite: find the most nominee possible and then hope that every finite total order is isomorphic to some of them.
 			</div>
-			<!--<div class="text">
-				Let's take two sets, say $A := \{ \alpha, \beta, \gamma \}$ and $B := \{ \delta, \epsilon \}$. Let's give each of them a total order, something like $\alpha < \beta < \gamma$ and the order $\delta < \epsilon$ for $B$. That is, $\alpha$ is the first element of $A$, $\beta$ the second and $\gamma$ the third; while $\delta$ is the first and $\epsilon$ the last element of $B$. We can now take the function $f : B \to A$ such that $f(\delta) = \beta$ and $f(\epsilon) = \gamma$.
+			<h3>
+				Numbers?
+			</h3>
+			<div class="text">
+				Let's look at a few particular sets. The zeroth one is $A_0 := \emptyset$, the first one $A_1 := \{\emptyset\}$, the second $A_2 := \{\emptyset, \{\emptyset\}\}$ and the $(n+1)$-th is the set containing all the previous ones, that is $A_{n+1} := \{A_1, A_2, \dots, A_n\}$. You first notice that if $n < m$, then $A_n \in A_m$ (read: $A_n$ is in $A_m$ or $A_m$ is an element of $A_m$).
+			</div>
+			<div class="note">
+				Sidenote here: we often use the notation $a := b$ to say: "let's define $b$ by it being equal to $b$", where $b$ is often complex-looking. This differs from the usual $a = b$ being only a statement: "I state that $a$ and $b$ are equal".
 			</div>
 			<div class="text">
-				"We could totally do that, but why would we?" you think? Because it is an order-preserving function, also called order isomorphism (or just simply isomorphism when there are no ambiguity). This means that if $x$ and $y$ are elements of $B$ with $x < y$, then $f(x) < f(y)$
-			</div>-->
+			  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0, A_1, \dots$, let's say that these are the natural numbers.
+			</div>
+			<div class="note">
+				Here I come to warn you: from now on, things will get weirder and weirder. For instance, with this definition, a number is both an element and a set; $5$ is a set with five ordered elements, but also the greatest element of $6$.This may look like a weaknes or an overly-complex thing to do, but it will have its use.
+			</div>
+			<div class="text">
+				So, why would we do that? Why would we call these things "numbers"? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) and here, we just have a nice recipe! To be extra precise, we often call them "ordianl numbers", or simply "ordinals".
+			</div>
+			<div class="note">
+				A closer look at the  process we used to create our natural numbers shows that $n+1 := n \cup \{n\}$. That is, $n+1$ is the union of the set $n$ (so it contains every element that $n$ contains) and of the set containing only $n$. Imagine taking a big box an tossing in it the content of $n$ and then $n$ itself. That big box is now $n+1$.
+			</div>
+			<h3>
+				To infinity!
+			</h3>
+			<div class="text">
+				Now that we can count as high as we want (but please, don't do drugs), we still want more! And here comes the <span class="foreign-language">deus ex machina</span>, the axiom saving us: the collection of all natural numbers is a set. Let's call it $\omega$. Why does its existence matters ? Because, we can apply our number making recipe again and call $s(\omega) := \omega \cup \{\omega\}$ and define $s(s(\omega))$, $s(s(s(\omega)))$, ... the same way.
+			</div>
+			<div class="note">
+				Before we go further, we should notice that what I called $\omega$ may look like what is usually called $\mathbb{N}$. Why naming it differently? Because I swiped a few things under the rug, some weird technicalities, like that we cannot be sure that $\omega$ and $\mathbb{N}$ are exaclty the same object, that $\mathbb{N}$ do is a set and some other odd stuff. You shouldn't care too much about this, because a teacher once told us that "it is a matter of faith".
+			</div>
+			<div class="text">
+				Good, we have new number candidates. But how does they relate to orders ? Well, $\omega$ as a set is like an infinite ladder, with steps going higher and higher, unbounded. $\omega$ as an element is something bigger than any of the previous regular finite natural integer. Then, $s(\omega)$ as a set is like the previous ladder, but with a final step, although this step lacks a predecessor: we somehow have all the natural integers and then, a last element.
+			</div>
+			<div class="pict">
+			</div>
+			<div class="text">
+				In fact, I used the notation $\alpha+1$ and $s(\alpha)$ for some ordinals, the former for finite ones and the latter for infinite ones. What is the difference? The latter means "the successor of $\alpha$", while the former is ... unclear?! It may means the same as before for finite ordinals, but what does adding means for infinite ones? As you may have noticed, we don't know how to add infinite things.
+			</div>
+			<h3>
+				Arithmetic
+			</h3>
+			<div class="text">
+				When adding $n$ and $m$, you count "one, two, ..., $n$, $n+1$, ..., $n+m$". In other words, you concatenated the order on $n$ with the one on $m$. We need to be cautious here, because, as we defined earlier, we may have $1 \in n$ and $1 \in m$. So, to unfog any ambiguity, let's call $x'$ the elements of $m$ (and so, $n := \{ 0', 1', 2', \dots, (n-1)'\}$) and and define the new order on $n \cup m$ by saying that every element in $m$ is bigger than any element in $n$.
+			</div>
+			<div class="text">
+				How does that help? Well, because we have a total order on a set, it corresponds to a number: here, $n+m$. For instance, if $n:=2$ and $m:=3$, then the set corresponding to $n+m$ would be $\{0,1,0',1',2'\}$, with the order $0 < 1 < 0' < 1' < 2'$. And this one is isomorphic to the order on $5$ (as a reminder, $5 := \{0,1,2,3,4\}$). So we say that $2 + 3 = 5$.
+			</div>
+			<div class="text">
+				Let's do that, but with $\omega$. Put $n := 1$ and $m := \omega$. Consider the set $(1 + \omega) := \{0,0',1',2', \dots \}$, ordered with $0 < 0'< 1' < 2' < \dots$. Well, if we do the following renaming : $0 \mapsto 0''$, $0' \mapsto 1''$, $1' \mapsto 2''$, $2' \mapsto 3''$,... we have what I called sooner an isomorphism between  $(1+\omega)$ and $\omega$. Following the logic, we now have $1+ \omega = \omega$. Strange.
+			</div>
+			<div class="text">
+				What if we do the opposite? Put $n := \omega$ and $m := 1$? We find the set $(\omega + 1) := \{0,1,2, \dots, 0'\}$. And by renaming $0 \mapsto 0''$, $1 \mapsto 1''$, ..., $0' \mapsto \omega''$, we have that $(\omega + 1)$ is isomorphic to $s(\omega)$.
+			</div>
+			<div class="text">
+				On one hand, this is comforting: I sooner claimed that $s(\alpha)$ and $\alpha + 1$ are very similar for finite ordinals, and now we have the same result for an infinite one. On the other hand, well ... addition does not seems to be commutative (i.e. $a + b$ is not necessarily equal to $b + a$), and on that, we will need to be very cautious.
+			</div>
+			<div class="text">
+			</div>
 		</div>
 		</section>
 	</body>
