@@ -154,15 +154,22 @@
 				How does that help? Well, because we have a total order on a set, it corresponds to a number: here, $n+m$. For instance, if $n:=2$ and $m:=3$, then the set corresponding to $n+m$ would be $\{0,1,0',1',2'\}$, with the order $0 < 1 < 0' < 1' < 2'$. And this one is isomorphic to the order on $5$ (as a reminder, $5 := \{0,1,2,3,4\}$). So we say that $2 + 3 = 5$.
 			</div>
 			<div class="text">
-				Let's do that, but with $\omega$. Put $n := 1$ and $m := \omega$. Consider the set $(1 + \omega) := \{0,0',1',2', \dots \}$, ordered with $0 < 0'< 1' < 2' < \dots$. Well, if we do the following renaming : $0 \mapsto 0''$, $0' \mapsto 1''$, $1' \mapsto 2''$, $2' \mapsto 3''$,... we have what I called sooner an isomorphism between  $(1+\omega)$ and $\omega$. Following the logic, we now have $1+ \omega = \omega$. Strange.
+				Let's do that, but with $\omega$. Put $n := 1$ and $m := \omega.$ Consider the set $(1 + \omega) := \{0,0',1',2', \dots \}$, ordered with $0 < 0'< 1' < 2' < \dots$. Well, if we do the following renaming : $0 \mapsto 0''$, $0' \mapsto 1''$, $1' \mapsto 2''$, $2' \mapsto 3''$,... we have what I called sooner an isomorphism between  $(1+\omega)$ and $\omega$. Following the logic, we now have $1+ \omega = \omega$. Strange.
 			</div>
 			<div class="text">
 				What if we do the opposite? Put $n := \omega$ and $m := 1$? We find the set $(\omega + 1) := \{0,1,2, \dots, 0'\}$. And by renaming $0 \mapsto 0''$, $1 \mapsto 1''$, ..., $0' \mapsto \omega''$, we have that $(\omega + 1)$ is isomorphic to $s(\omega)$.
 			</div>
 			<div class="text">
-				On one hand, this is comforting: I sooner claimed that $s(\alpha)$ and $\alpha + 1$ are very similar for finite ordinals, and now we have the same result for an infinite one. On the other hand, well ... addition does not seems to be commutative (i.e. $a + b$ is not necessarily equal to $b + a$), and on that, we will need to be very cautious.
+				On one hand, this is comforting: I sooner claimed that $s(\alpha)$ and $\alpha + 1$ are very similar for finite ordinals, and now we have the same result for an infinite one. On the other hand, addition does not seems to be commutative (i.e. $a + b$ is not necessarily equal to $b + a$), and on that, we will need to be very cautious.
 			</div>
 			<div class="text">
+				So, we can work out things like $\omega +2$, $\omega +1312$ and everything that is of the form $\omega + n$, $n$ being a finite number. But what meaning should we give to $\omega + \omega$? Surely, something like "omega, but twice".
+			</div>
+			<div class="text">
+				Then we need multiplication. Again, lets look at small exemple. Put $n := 2$, $m := 3$ and let's look at $n \times m$. The usual way of doing that is with rectangle, of height $n$ and width $m$. To represent it using sets, we'll do the cartesian product, or set multiplication, between $n$ and $m$; that is the set of all possible pairs. So we have $(n\times m) := \{(0;0), (0;1), (1;0), (1;1), (2;0), (2;1)\}$ or, using the prime notation, $(n'\times m) := \{(0';0), (0';1), (1';0), (1';1), (2';0), (2';1)\}$.
+			</div>
+			<div class="text">
+				Again, we'll now need an order on this set
 			</div>
 		</div>
 		</section>
