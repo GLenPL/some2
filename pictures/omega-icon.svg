@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <svg
      version="1.1"
-     id="svg1061"
-     sodipodi:docname="Carte : nord des plaines de Tröm.svg"
-     inkscape:version="1.1.1 (50ffc5b540, 2022-01-11)"
+     id="omega-icon"
+     sodipodi:docname="omega-icon.svg"
      viewBox="0 0 1 1"
      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
      xmlns="http://www.w3.org/2000/svg"
-     xmlns:svg="http://www.w3.org/2000/svg">
-     <text x="0" y="0" font-size="0.9">$\omega$</text>
+     xmlns:svg="http://www.w3.org/2000/svg"
+>
+     <text x="0.1" y="0.9" font-size="1" fill="#d8d8f8">&#x03c9;</text>
 </svg>

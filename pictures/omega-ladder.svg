@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg
+     version="1.1"
+     id="omega-ladder"
+     sodipodi:docname="omega-ladder.svg"
+     inkscape:version="1.1.1 (50ffc5b540, 2022-01-11)"
+     viewBox="0 0 1500 1000"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"
+>
+<style>
+  .number {
+    font-size: 100px;
+    fill: #242450;
+  }
+  path {
+    stroke-width: 10px;
+    stroke: #404040;
+    fill: none;
+    stroke-linecap: square;
+    stroke-linejoin: bevel;
+  }
+  </style>
+  <g>
+
+    <text class="number" x="50" y="675">0</text>
+    <text class="number" x="150" y="675">1</text>
+    <text class="number" x="250" y="675">2</text>
+    <text class="number" x="350" y="675">3</text>
+    <text class="number" x="450" y="675">4</text>
+    <text class="number" x="550" y="675">5</text>
+    <text class="number" x="650" y="675">...</text>
+    <text class="number" x="1100" y="675">&#x03c9;</text>
+  </g>
+  <g>
+    <path
+      d="
+        M 75 725 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+
+        m 95 -95 l 0 90
+        m 85 -85 l 0 80
+        m 75 -75 l 0 70
+        m 65 -65 l 0 60
+        m 55 -55 l 0 50
+        m 45 -45 l 0 40
+        m 35 -35 l 0 30
+      "
+    />
+    <path
+      d="
+        M 1125 725 l 0 100
+      "
+    />
+    <path
+      d="
+        M 75 775 l 1125 0
+        l -25 -25 m 0 50 l 25 -25
+      "
+    />
+  </g>
+  <g>
+    <path
+      d="
+        M 1275 875
+        a 25 25 0 0 1 -25 25
+        l -1200 0
+        a 25 25 0 0 1 -25 -25
+        l 0 -300
+        a 25 25 0 0 1 25 -25
+        l 1200 0
+        a 25 25 0 0 1 25 25
+        l 0 100
+      "
+    />
+    <text class="number" x="1250" y="800">s(&#x03c9;)</text>
+  </g>
+  <g>
+    <text class="number" x="50" y="225">0</text>
+    <text class="number" x="150" y="225">1</text>
+    <text class="number" x="250" y="225">2</text>
+    <text class="number" x="350" y="225">3</text>
+    <text class="number" x="450" y="225">4</text>
+    <text class="number" x="550" y="225">5</text>
+    <text class="number" x="650" y="225">...</text>
+  </g>
+  <g>
+    <path
+      d="
+        M 75 275 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+        m 100 -100 l 0 100
+
+        m 95 -95 l 0 90
+        m 85 -85 l 0 80
+        m 75 -75 l 0 70
+        m 65 -65 l 0 60
+        m 55 -55 l 0 50
+        m 45 -45 l 0 40
+        m 35 -35 l 0 30
+      "
+    />
+    <path
+      d="
+        M 75 325 l 1125 0
+        l -25 -25 m 0 50 l 25 -25
+      "
+    />
+  </g>
+  <g>
+    <path
+      d="
+        M 1275 425
+        a 25 25 0 0 1 -25 25
+        l -1200 0
+        a 25 25 0 0 1 -25 -25
+        l 0 -300
+        a 25 25 0 0 1 25 -25
+        l 1200 0
+        a 25 25 0 0 1 25 25
+        l 0 100
+      "
+    />
+    <text class="number" x="1250" y="350">&#x03c9;</text>
+  </g>
+</svg>
