@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg
+     version="1.1"
+     id="omega-times-two"
+     sodipodi:docname="omega-times-two.svg"
+     inkscape:version="1.1.1 (50ffc5b540, 2022-01-11)"
+     viewBox="0 0 1500 1000"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"
+>
+<defs>
+  <g id="segment-path">
+    <path
+      class="segment"
+      d="
+        M 0 -25
+        l 0 50
+      "
+    />
+  </g>
+</defs>
+<style>
+  .number {
+    font-size: 100px;
+    fill: #242450;
+  }
+  .set, .arrow, .segment {
+    fill: none;
+    stroke-width: 10px;
+    stroke: #242450;
+    stroke-linecap: square;
+    stroke-linejoin: bevel;
+  }
+</style>
+  <path
+    class="set"
+    d="
+      M 1325 800
+      l 0 125
+      a 25 25 0 0 1 -25 25
+      l -1250 0
+      a 25 25 0 0 1 -25 -25
+      l 0 -875
+      a 25 25 0 0 1 25 -25
+      l 1250 0
+      a 25 25 0 0 1 25 25
+      l 0 350
+    "
+  />
+  <path
+    class="arrow"
+    d="
+      M 150 250
+      l 800 0
+      m 45 0
+      l 45 0
+      m 40 0
+      l 20 0
+      m 50 0
+      q 100 0, 100 50
+      c 0 100, -1200 250, -1200 350
+      q 0 50, 100 50
+      l 1050 0
+      l -25 -25
+      m 0 50
+      l 25 -25
+    "
+  />
+
+  <use x="150" y="250" href="#segment-path"/>
+  <text x="125" y="200" class="number">0</text>
+  <use x="400" y="250" href="#segment-path"/>
+  <text x="375" y="200" class="number">1</text>
+  <use x="650" y="250" href="#segment-path"/>
+  <text x="625" y="200" class="number">2</text>
+
+  <path class="segment" d="M 850 235 l 0 30"/>
+
+
+  <use x="150" y="700" href="#segment-path"/>
+  <text x="125" y="800" class="number">&#x03c9;</text>
+  <use x="400" y="700" href="#segment-path"/>
+  <text x="300" y="800" class="number">&#x03c9;+1</text>
+  <use x="650" y="700" href="#segment-path"/>
+  <text x="550" y="800" class="number">&#x03c9;+2</text>
+
+  <path class="segment" d="M 850 680 l 0 40"/>
+  <path class="segment" d="M 1000 685 l 0 30"/>
+
+  <text class="number" x="1225" y="525">&#x03c9;&#x00d7;2</text>
+  <text class="number" x="1300" y="625">=</text>
+  <text class="number" x="1225" y="725">&#x03c9;+&#x03c9;</text>
+</svg>

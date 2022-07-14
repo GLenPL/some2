@@ -150,7 +150,7 @@
 				In fact, I used the notation $\alpha+1$ and $s(\alpha)$ for some ordinals, the former for finite ones and the latter for infinite ones. What is the difference? The latter means "the successor of $\alpha$", while the former is ... unclear?! It may means the same as before for finite ordinals, but what does adding means for infinite ones? As you may have noticed, we don't know how to add infinite things.
 			</div>
 			<h3>
-				Arithmetic
+				Addition
 			</h3>
 			<div class="text">
 				When adding $n$ and $m$, you count "one, two, ..., $n$, $n+1$, ..., $n+m$". In other words, you concatenated the order on $n$ with the one on $m$. We need to be cautious here, because, as we defined earlier, we may have $1 \in n$ and $1 \in m$. So, to unfog any ambiguity, let's call $x'$ the elements of $m$ (and so, $n := \{ 0', 1', 2', \dots, (n-1)'\}$) and and define the new order on $n \cup m$ by saying that every element in $m$ is bigger than any element in $n$.
@@ -170,6 +170,9 @@
 			<div class="text">
 				So, we can work out things like $\omega +2$, $\omega +1312$ and everything that is of the form $\omega + n$, $n$ being a finite number. But what meaning should we give to $\omega + \omega$? Surely, something like "omega, but twice".
 			</div>
+			<h3>
+				Multiplication
+			</h3>
 			<div class="large">
 				Then we need multiplication. Again, lets look at small exemple. Put $n := 2$, $m := 3$ and let's look at $n \times m$. The usual way of doing that is with rectangle, of height $n$ and width $m$. To represent it using sets, we'll do the cartesian product, or set multiplication, between $n$ and $m$; that is the set of all possible pairs. So we have $(n\times m) := \{(0;0), (1;0), (0;1), (1;1), (0;2), (1;2)\}$ or, using the prime notation, $(n'\times m) := \{(0';0), (1';0), (0';1), (1';1), (0';2), (1';2)\}$.
 			</div>
@@ -184,6 +187,9 @@
 			</div>
 			<div class="large">
 				We do have $(n \times m) = \{(0;0), (1;0), (2;0), \dots, (0;1), (1;1), (2;1), \dots , \}$. And about the order on that set ? Well, we have $(0;0) < (1;0)<  (2;0) < \dots < (0;1) < (1;1) < (2;1) < \dots$. Here, you may start to wonder : "Have I ever seen that before?". Well, yes, because it looks like a sum, but no, because I skipped it. Try and add $\omega$ to itself: you fisrt have a copy of $\omega$, and then a second one. It would look like $(\omega + \omega) = \{0,1,2, \dots, \omega, \omega + 1, \omega +2, \dots\}$. With the renaming $0 \mapsto (0;0)$, $1 \mapsto (1;0)$, ..., $\omega \mapsto (0;1)$, $\omega +1 \mapsto (1;1)$, ..., we have an isomorphism between $\omega + \omega$ and $\omega \times 2$.
+			</div>
+			<div class="pict">
+				<img src="pictures/omega-times-two.svg"/>
 			</div>
 
 		</div>
