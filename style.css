@@ -78,7 +78,7 @@ body{
 	width: 90%;
 }
 
-@media (width <= 35em) {
+@media (width <= 50em) {
 	:is(.text, .pict, .note, .large){
 		width: 90%;
 		padding: 0.5em;
