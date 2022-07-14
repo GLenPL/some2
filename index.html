@@ -93,7 +93,7 @@
 			Orders!
 		</h3>
 			<div class="text">
-				When counting, one gives an order to things. There is the first thing, the second thing, the third thing, ... and sometimes, when there is nothing at all, there is a total of zero things. As you notice, counting in intrisincally bonded to the idea of order.
+				When counting, one gives an order to things. There is the first thing, the second thing, the third thing, ... and sometimes, when there is nothing at all, there is a total of zero things. As you notice, counting in intrinsically bonded to the idea of order.
 			</div>
 			<div class="text">
 				Not any orders, in fact! When dealing with finite sets, only those which are total orders allows to count. By this, we mean orders on a set such that every two elements $a$ and $b$ are in relation: either $a < b$, $a > b$ or $a = b$. This may seem like an unnecessary remark, but the study of partial orders is particularly interesting (but we won't deal with them here).
@@ -114,16 +114,19 @@
 				Let's look at a few particular sets. The zeroth one is $A_0 := \emptyset$, the first one $A_1 := \{\emptyset\}$, the second $A_2 := \{\emptyset, \{\emptyset\}\}$ and the $(n+1)$-th is the set containing all the previous ones, that is $A_{n+1} := \{A_1, A_2, \dots, A_n\}$. You first notice that if $n < m$, then $A_n \in A_m$ (read: $A_n$ is in $A_m$ or $A_m$ is an element of $A_m$).
 			</div>
 			<div class="note">
-				Sidenote here: we often use the notation $a := b$ to say: "let's define $b$ by it being equal to $b$", where $b$ is often complex-looking. This differs from the usual $a = b$ being only a statement: "I state that $a$ and $b$ are equal".
+				Sidenote here: we often use the notation $a := b$ to say: "let's define $a$ by it being equal to $b$", where $b$ is often complex-looking. This differs from the usual $a = b$ being only a statement: "I state that $a$ and $b$ are equal".
 			</div>
 			<div class="large">
-			  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0, A_1, \dots$, let's say that these are the natural numbers, the ones usually called $0$, $1$, $2$, $3$, $4$, ...
+			  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0$, $A_1$, $A_2$, $A_3$, ..., let's say that these are the natural numbers, the ones usually called $0$, $1$, $2$, $3$, ...
+			</div>
+			<div class="pict">
+				<img src="pictures/1-2-3-sets.svg" />
 			</div>
 			<div class="note">
 				Here I come to warn you: from now on, things will get weirder and weirder. For instance, with this definition, a number is both an element and a set; $5$ is a set with five ordered elements, but also the greatest element of $6$.This may look like a weaknes or an overly-complex thing to do, but it will have its use.
 			</div>
 			<div class="text">
-				So, why would we do that? Why would we call these things "numbers"? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) and here, we just have a nice recipe! To be extra precise, we often call them "ordianl numbers", or simply "ordinals".
+				So, why would we do that? Why would we call these things "numbers"? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) and here, we just have a nice recipe! To be extra precise, we often call them "ordinal numbers", or simply "ordinals".
 			</div>
 			<div class="note">
 				A closer look at the  process we used to create our natural numbers shows that $n+1 := n \cup \{n\}$. That is, $n+1$ is the union of the set $n$ (so it contains every element that $n$ contains) and of the set containing only $n$. Imagine taking a big box an tossing in it the content of $n$ and then $n$ itself. That big box is now $n+1$.

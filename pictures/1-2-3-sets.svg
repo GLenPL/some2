@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg
+     version="1.1"
+     id="omega-icon"
+     sodipodi:docname="omega-icon.svg"
+     viewBox="0 0 2250 1000"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:svg="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <g id="set-path-and-arrow">
+      <path
+        class="set"
+        d="
+          M 700 400
+          l 0 25
+          a 25 25 0 0 1 -25 25
+          l -600 0
+          a 25 25 0 0 1 -25 -25
+          l 0 -350
+          a 25 25 0 0 1 25 -25
+          l 600 0
+          a 25 25 0 0 1 25 25
+          l 0 125
+        "
+      />
+      <path
+        class="arrow"
+        d="
+          M 100 300
+          l 500 0
+          l -25 -25
+          m 0 50
+          l 25 -25
+        "
+      />
+    </g>
+    <g id="segment-path">
+      <path
+        class="segment"
+        d="
+          M 0 -25
+          l 0 50
+        "
+      />
+    </g>
+  </defs>
+  <style>
+    .number {
+      font-size: 100px;
+      fill: #242450;
+    }
+    .set, .arrow, .segment {
+      fill: none;
+      stroke-width: 10px;
+      stroke: #242450;
+      stroke-linecap: square;
+      stroke-linejoin: bevel;
+    }
+  </style>
+  <g>
+  <use x="0" y="0" href="#set-path-and-arrow"/>
+  <text x="650" y="325" class="number">0</text>
+</g>
+<g>
+  <use x="0" y="500" href="#set-path-and-arrow"/>
+  <text x="650" y="825" class="number">1</text>
+  <use x="100" y="800" href="#segment-path"/>
+  <text x="75" y="750" class="number">0</text>
+</g>
+<g>
+  <use x="750" y="0" href="#set-path-and-arrow"/>
+  <text x="1400" y="325" class="number">2</text>
+  <use x="850" y="300" href="#segment-path"/>
+  <text x="825" y="250" class="number">0</text>
+  <use x="950" y="300" href="#segment-path"/>
+  <text x="925" y="250" class="number">1</text>
+</g>
+<g>
+  <use x="750" y="500" href="#set-path-and-arrow"/>
+  <text x="1400" y="825" class="number">3</text>
+  <use x="850" y="800" href="#segment-path"/>
+  <text x="825" y="750" class="number">0</text>
+  <use x="950" y="800" href="#segment-path"/>
+  <text x="925" y="750" class="number">1</text>
+  <use x="1050" y="800" href="#segment-path"/>
+  <text x="1025" y="750" class="number">2</text>
+</g>
+<g>
+  <use x="1500" y="0" href="#set-path-and-arrow"/>
+  <text x="2150" y="325" class="number">4</text>
+  <use x="1600" y="300" href="#segment-path"/>
+  <text x="1575" y="250" class="number">0</text>
+  <use x="1700" y="300" href="#segment-path"/>
+  <text x="1675" y="250" class="number">1</text>
+  <use x="1800" y="300" href="#segment-path"/>
+  <text x="1775" y="250" class="number">2</text>
+  <use x="1900" y="300" href="#segment-path"/>
+  <text x="1875" y="250" class="number">3</text>
+</g>
+<g>
+  <use x="1500" y="500" href="#set-path-and-arrow"/>
+  <text x="2150" y="825" class="number">5</text>
+  <use x="1600" y="800" href="#segment-path"/>
+  <text x="1575" y="750" class="number">0</text>
+  <use x="1700" y="800" href="#segment-path"/>
+  <text x="1675" y="750" class="number">1</text>
+  <use x="1800" y="800" href="#segment-path"/>
+  <text x="1775" y="750" class="number">2</text>
+  <use x="1900" y="800" href="#segment-path"/>
+  <text x="1875" y="750" class="number">3</text>
+  <use x="2000" y="800" href="#segment-path"/>
+  <text x="1975" y="750" class="number">4</text>
+</g>
+</svg>
