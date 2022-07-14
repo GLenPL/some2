@@ -115,8 +115,8 @@
 			<div class="note">
 				Sidenote here: we often use the notation $a := b$ to say: "let's define $b$ by it being equal to $b$", where $b$ is often complex-looking. This differs from the usual $a = b$ being only a statement: "I state that $a$ and $b$ are equal".
 			</div>
-			<div class="text">
-			  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0, A_1, \dots$, let's say that these are the natural numbers.
+			<div class="large">
+			  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0, A_1, \dots$, let's say that these are the natural numbers, the ones usually called $0$, $1$, $2$, $3$, $4$, ...
 			</div>
 			<div class="note">
 				Here I come to warn you: from now on, things will get weirder and weirder. For instance, with this definition, a number is both an element and a set; $5$ is a set with five ordered elements, but also the greatest element of $6$.This may look like a weaknes or an overly-complex thing to do, but it will have its use.
@@ -166,11 +166,21 @@
 				So, we can work out things like $\omega +2$, $\omega +1312$ and everything that is of the form $\omega + n$, $n$ being a finite number. But what meaning should we give to $\omega + \omega$? Surely, something like "omega, but twice".
 			</div>
 			<div class="large">
-				Then we need multiplication. Again, lets look at small exemple. Put $n := 2$, $m := 3$ and let's look at $n \times m$. The usual way of doing that is with rectangle, of height $n$ and width $m$. To represent it using sets, we'll do the cartesian product, or set multiplication, between $n$ and $m$; that is the set of all possible pairs. So we have $(n\times m) := \{(0;0), (0;1), (1;0), (1;1), (2;0), (2;1)\}$ or, using the prime notation, $(n'\times m) := \{(0';0), (0';1), (1';0), (1';1), (2';0), (2';1)\}$.
+				Then we need multiplication. Again, lets look at small exemple. Put $n := 2$, $m := 3$ and let's look at $n \times m$. The usual way of doing that is with rectangle, of height $n$ and width $m$. To represent it using sets, we'll do the cartesian product, or set multiplication, between $n$ and $m$; that is the set of all possible pairs. So we have $(n\times m) := \{(0;0), (1;0), (0;1), (1;1), (0;2), (1;2)\}$ or, using the prime notation, $(n'\times m) := \{(0';0), (1';0), (0';1), (1';1), (0';2), (1';2)\}$.
 			</div>
 			<div class="text">
-				Again, we'll now need an order on this set
+				Again, we'll now need an order on this set! The convention (and to be clear, it is only a convention, but a really observed one) is to give it the anti-lexicographic order. This barbaric piece of jargon means that the in order to compare two pairs, you first compare the right-most coordinates of the two pairs and then, if they are equal, the coordinates to the left.
 			</div>
+			<div class="note">
+				To be clear, with that mean of ordering in mind, we have $(10,2) > (20,1)$ because $2 > 1$ (and so here, we do not care about the order between $10$ and $20$). We also have $(10,3) < (20,3)$, because $3 = 3$ and then, $10 < 20$. Also, the name lexicographic means "like in a dictionnary", because you compare the first letters of two words and then the second ones, and so on.
+			</div>
+			<div class="large">
+				In our previous example, we thus have the ordering $(0;0) < (1;0) < (0;1) < (1;1) < (0;2) < (1;2)$, which, by a clever renaming, can be seen as the order on $6 = \{0,1,2,3,4,5\}$. We've just seen that $2 \times 3 = 6$. Hurray! Again, we redo this example on $(3 \times 2) := \{(0;0), (1;0), (2;0), (0;1), (1;1), (2;1)\}$. We notice something: $(3 \times 2)$ and $(2 \times 3)$ are two different sets, but happily, they are isomorphic. Now, let's see what happens with $n := \omega$ and $m := 2$.
+			</div>
+			<div class="large">
+				We do have $(n \times m) = \{(0;0), (1;0), (2;0), \dots, (0;1), (1;1), (2;1), \dots , \}$. And about the order on that set ? Well, we have $(0;0) < (1;0)<  (2;0) < \dots < (0;1) < (1;1) < (2;1) < \dots$. Here, you may start to wonder : "Have I ever seen that before?". Well, yes, because it looks like a sum, but no, because I skipped it. Try and add $\omega$ to itself: you fisrt have a copy of $\omega$, and then a second one. It would look like $(\omega + \omega) = \{0,1,2, \dots, \omega, \omega + 1, \omega +2, \dots\}$. With the renaming $0 \mapsto (0;0)$, $1 \mapsto (1;0)$, ..., $\omega \mapsto (0;1)$, $\omega +1 \mapsto (1;1)$, ..., we have an isomorphism between $\omega + \omega$ and $\omega \times 2$.
+			</div>
+
 		</div>
 		</section>
 	</body>
