@@ -85,12 +85,11 @@
   <path class="segment" d="M 850 235 l 0 30"/>
 
   <use x="150" y="700" href="#segment-path"/>
-  <text x="100" y="825" class="number">&#x03c9;</text>
+  <text x="106.25" y="825" class="number">&#x03c9;</text>
   <use x="400" y="700" href="#segment-path"/>
   <text x="275" y="825" class="number">&#x03c9;+1</text>
   <use x="650" y="700" href="#segment-path"/>
   <text x="525" y="825" class="number">&#x03c9;+2</text>
-
   <path class="segment" d="M 850 680 l 0 40"/>
   <path class="segment" d="M 1000 685 l 0 30"/>
 
