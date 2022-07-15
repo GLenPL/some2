@@ -41,7 +41,7 @@ body{
 	align-items: center;
 }
 
-@media (width <= 55em) {
+@media (width <= 65em) {
 	#principale{
 		width: 95%;
 	}
@@ -63,9 +63,9 @@ body{
 
 :is(.text, .pict, .note, .large){
 	width: 40%;
-	padding: 0.75em;
+	padding: 1%;
 	margin: 1%;
-	border: 1px solid;
+	border: 0.125em solid;
 	border-radius: 1.5em;
 
 	text-align: justify;
@@ -78,7 +78,7 @@ body{
 	width: 90%;
 }
 
-@media (width <= 50em) {
+@media (width <= 60em) {
 	:is(.text, .pict, .note, .large){
 		width: 90%;
 		padding: 0.5em;

@@ -62,7 +62,13 @@
       q 100 0, 100 50
       c 0 100, -1200 250, -1200 350
       q 0 50, 100 50
-      l 1050 0
+      l 900 0
+      m 50 0
+      l 30 0
+      m 30 0
+      l 10 0
+      m 20 0
+      l 10 0
       l -25 -25
       m 0 50
       l 25 -25
@@ -78,13 +84,12 @@
 
   <path class="segment" d="M 850 235 l 0 30"/>
 
-
   <use x="150" y="700" href="#segment-path"/>
-  <text x="125" y="800" class="number">&#x03c9;</text>
+  <text x="100" y="825" class="number">&#x03c9;</text>
   <use x="400" y="700" href="#segment-path"/>
-  <text x="300" y="800" class="number">&#x03c9;+1</text>
+  <text x="275" y="825" class="number">&#x03c9;+1</text>
   <use x="650" y="700" href="#segment-path"/>
-  <text x="550" y="800" class="number">&#x03c9;+2</text>
+  <text x="525" y="825" class="number">&#x03c9;+2</text>
 
   <path class="segment" d="M 850 680 l 0 40"/>
   <path class="segment" d="M 1000 685 l 0 30"/>
