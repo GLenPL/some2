@@ -20,187 +20,161 @@
 			<h1>
 				Extraordinary ordinals
 			</h1>
-			<!-- <h2>
-				What to count? (an unnecessary preamble)
+			<div id="how-to-count">
+			<h2>
+				How to count?
 			</h2>
-			<div id="set-theory">
 			<h3>
-				What are we even going to count? (consider this an introduction)
+				Orders!
 			</h3>
-			<div class="text">
-				First things first, we need to discuss what it is that we study. We study things. Things have properties. Two things are said to be equal if every of there properties are equals. An apple and a blueberry are not equal : one is green and big, the other blue and small. There color and size properties differ. On the contrary, a banana and itself are equal: all their properties are indistinguishable (curviture, position, color, size, taste, ...).
+				<div class="text">
+					When counting, one gives an order to things. There is the first thing, the second thing, the third thing, ... and sometimes, when there is nothing at all, there is a total of zero things. As you notice, counting in intrinsically bonded to the idea of order.
+				</div>
+				<div class="text">
+					Not any orders, in fact! When dealing with finite sets, only those which are total orders allows to count. By this, we mean orders on a set such that every two elements $a$ and $b$ are in relation: either $a < b$, $a > b$ or $a = b$. This may seem like an unnecessary remark, but the study of partial orders is particularly interesting (but we won't deal with them here).
+				</div>
+				<div class="text">
+					One order is good, but two is better! Consider the usual ones on $\{0,1,2\}$ and $\{3,4,5\}$? They look different, but are pretty similar: they both have elements, both have a first, second and third element and both doesn't have a fourth element. In fact, they are said to be isomorphic, i.e. up to a change of label, they are identical. I will often use the symbol $a \mapsto b$ to tell "let's rename $a$ into $b$".
+				</div>
+				<div class="text">
+					Before moving on, let's ask ourselves what we like when we count. If we are to generalize counting, we need to get rid of a few properties and, most importantly, to keep some. When we count in the usual set $\mathbb{N}$ of the natural integer, we notice something: every subset $S$ of $\mathbb{N}$ has a least element (i.e. an element less than any other element in $S$). So, we may want to go with that: every order we'll consider will have this property, and we will call them well-orders.
+				</div>
+				<div class="note">
+					An equivalent property to being well-ordered for an ordered set $S$ is that there is strictly decreasing sequence of elements of $S$. Still using the $\mathbb{N}$ example, try and find a strictly decreasing sequence of integers. If you can't, that is normal, because such a thing does not exists.
+				</div>
+				<div class="text">
+					We may now try to find a classification of these order, and for each class, a quintessential order. In fact, we'll do the opposite: find the most nominee possible and then hope that every finite total order is isomorphic to some of them.
+				</div>
+				<h3>
+					Numbers?
+				</h3>
+				<div class="text">
+					Let's look at a few particular sets. The zeroth one is $A_0 := \emptyset$, the first one $A_1 := \{\emptyset\}$, the second $A_2 := \{\emptyset, \{\emptyset\}\}$ and the $(n+1)$-th is the set containing all the previous ones, that is $A_{n+1} := \{A_1, A_2, \dots, A_n\}$. You first notice that if $n < m$, then $A_n \in A_m$ (read: $A_n$ is in $A_m$ or $A_m$ is an element of $A_m$).
+				</div>
+				<div class="note">
+					Sidenote here: we often use the notation $a := b$ to say: "let's define $a$ by it being equal to $b$", where $b$ is often complex-looking. This differs from the usual $a = b$ being only a statement: "I state that $a$ and $b$ are equal".
+				</div>
+				<div class="large">
+				  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0$, $A_1$, $A_2$, $A_3$, ..., let's say that these are the natural numbers, the ones usually called $0$, $1$, $2$, $3$, ...
+				</div>
+				<div class="pict">
+					<img src="pictures/1-2-3-sets.svg" />
+				</div>
+				<div class="note">
+					Here I come to warn you: from now on, things will get weirder and weirder. For instance, with this definition, a number is both an element and a set; $5$ is a set with five ordered elements, but also the greatest element of $6$.This may look like a weaknes or an overly-complex thing to do, but it will have its use.
+				</div>
+				<div class="text">
+					So, why would we do that? Why would we call these things "numbers"? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) and here, we just have a nice recipe! To be extra precise, we often call them "ordinal numbers", or simply "ordinals".
+				</div>
+				<div class="note">
+					A closer look at the  process we used to create our natural numbers shows that $n+1 := n \cup \{n\}$. That is, $n+1$ is the union of the set $n$ (so it contains every element that $n$ contains) and of the set containing only $n$. Imagine taking a big box an tossing in it the content of $n$ and then $n$ itself. That big box is now $n+1$.
+				</div>
+				<h3>
+					To infinity!
+				</h3>
+				<div class="text">
+					Now that we can count as high as we want (but please, don't do drugs), we still want more! And here comes the <span class="foreign-language">deus ex machina</span>, the axiom saving us: the collection of all natural numbers is a set. Let's call it $\omega$. Why does its existence matters ? Because, we can apply our number making recipe again and call $s(\omega) := \omega \cup \{\omega\}$ and define $s(s(\omega))$, $s(s(s(\omega)))$, ... the same way.
+				</div>
+				<div class="note">
+					Before we go further, we should notice that what I called $\omega$ may look like what is usually called $\mathbb{N}$. Why naming it differently? Because I swiped a few things under the rug, some weird technicalities, like that we cannot be sure that $\omega$ and $\mathbb{N}$ are exaclty the same object, that $\mathbb{N}$ do is a set and some other odd stuff. You shouldn't care too much about this, because a teacher once told us that "it is a matter of faith".
+				</div>
+				<div class="text">
+					Good, we have new number candidates. But how does they relate to orders ? Well, $\omega$ as a set is like an infinite ladder, with steps going higher and higher, unbounded. $\omega$ as an element is something bigger than any of the previous regular finite natural integer. Then, $s(\omega)$ as a set is like the previous ladder, but with a final step, although this step lacks a predecessor: we somehow have all the natural integers and then, a last element.
+				</div>
+				<div class="pict">
+					<img src="pictures/omega-ladder.svg"/>
+				</div>
+				<div class="text">
+					In fact, I used the notation $\alpha+1$ and $s(\alpha)$ for some ordinals, the former for finite ones and the latter for infinite ones. What is the difference? The latter means "the successor of $\alpha$", while the former is ... unclear?! It may means the same as before for finite ordinals, but what does adding means for infinite ones? As you may have noticed, we don't know how to add infinite things.
+				</div>
+				<h3>
+					Addition
+				</h3>
+				<div class="text">
+					When adding $n$ and $m$, you count "one, two, ..., $n$, $n+1$, ..., $n+m$". In other words, you concatenated the order on $n$ with the one on $m$. We need to be cautious here, because, as we defined earlier, we may have $1 \in n$ and $1 \in m$. So, to unfog any ambiguity, let's call $x'$ the elements of $m$ (and so, $n := \{ 0', 1', 2', \dots, (n-1)'\}$) and and define the new order on $n \cup m$ by saying that every element in $m$ is bigger than any element in $n$.
+				</div>
+				<div class="text">
+					How does that help? Well, because we have a total order on a set, it corresponds to a number: here, $n+m$. For instance, if $n:=2$ and $m:=3$, then the set corresponding to $n+m$ would be $\{0,1,0',1',2'\}$, with the order $0 < 1 < 0' < 1' < 2'$. And this one is isomorphic to the order on $5$ (as a reminder, $5 := \{0,1,2,3,4\}$). So we say that $2 + 3 = 5$.
+				</div>
+				<div class="text">
+					Let's do that, but with $\omega$. Put $n := 1$ and $m := \omega.$ Consider the set $(1 + \omega) := \{0,0',1',2', \dots \}$, ordered with $0 < 0'< 1' < 2' < \dots$. Well, if we do the following renaming : $0 \mapsto 0''$, $0' \mapsto 1''$, $1' \mapsto 2''$, $2' \mapsto 3''$,... we have what I called sooner an isomorphism between  $(1+\omega)$ and $\omega$. Following the logic, we now have $1+ \omega = \omega$. Strange.
+				</div>
+				<div class="text">
+					What if we do the opposite? Put $n := \omega$ and $m := 1$? We find the set $(\omega + 1) := \{0,1,2, \dots, 0'\}$. And by renaming $0 \mapsto 0''$, $1 \mapsto 1''$, ..., $0' \mapsto \omega''$, we have that $(\omega + 1)$ is isomorphic to $s(\omega)$.
+				</div>
+				<div class="text">
+					On one hand, this is comforting: I sooner claimed that $s(\alpha)$ and $\alpha + 1$ are very similar for finite ordinals, and now we have the same result for an infinite one. On the other hand, addition does not seems to be commutative (i.e. $a + b$ is not necessarily equal to $b + a$), and on that, we will need to be very cautious.
+				</div>
+				<div class="text">
+					So, we can work out things like $\omega +2$, $\omega +1312$ and everything that is of the form $\omega + n$, $n$ being a finite number. But what meaning should we give to $\omega + \omega$? Surely, something like "omega, but twice".
+				</div>
+				<h3>
+					Multiplication
+				</h3>
+				<div class="large">
+					Then we need multiplication. Again, lets look at small exemple. Put $n := 2$, $m := 3$ and let's look at $n \times m$. The usual way of doing that is with rectangle, of height $n$ and width $m$. To represent it using sets, we'll do the cartesian product, or set multiplication, between $n$ and $m$; that is the set of all possible pairs. So we have $(n\times m) := \{(0;0), (1;0), (0;1), (1;1), (0;2), (1;2)\}$ or, using the prime notation, $(n'\times m) := \{(0';0), (1';0), (0';1), (1';1), (0';2), (1';2)\}$.
+				</div>
+				<div class="text">
+					Again, we'll now need an order on this set! The convention (and to be clear, it is only a convention, but a really observed one) is to give it the anti-lexicographic order. This barbaric piece of jargon means that the in order to compare two pairs, you first compare the right-most coordinates of the two pairs and then, if they are equal, the coordinates to the left.
+				</div>
+				<div class="note">
+					To be clear, with that mean of ordering in mind, we have $(10,2) > (20,1)$ because $2 > 1$ (and so here, we do not care about the order between $10$ and $20$). We also have $(10,3) < (20,3)$, because $3 = 3$ and then, $10 < 20$. Also, the name lexicographic means "like in a dictionnary", because you compare the first letters of two words and then the second ones, and so on.
+				</div>
+				<div class="large">
+					In our previous example, we thus have the ordering $(0;0) < (1;0) < (0;1) < (1;1) < (0;2) < (1;2)$, which, by a clever renaming, can be seen as the order on $6 = \{0,1,2,3,4,5\}$. We've just seen that $2 \times 3 = 6$. Hurray! Again, we redo this example on $(3 \times 2) := \{(0;0), (1;0), (2;0), (0;1), (1;1), (2;1)\}$. We notice something: $(3 \times 2)$ and $(2 \times 3)$ are two different sets, but happily, they are isomorphic. Now, let's see what happens with $n := \omega$ and $m := 2$.
+				</div>
+				<div class="large">
+					We do have $(n \times m) = \{(0;0), (1;0), (2;0), \dots, (0;1), (1;1), (2;1), \dots , \}$. And about the order on that set ? Well, we have $(0;0) < (1;0)<  (2;0) < \dots < (0;1) < (1;1) < (2;1) < \dots$. Here, you may start to wonder : "Have I ever seen that before?". Well, yes, because it looks like a sum, but no, because I skipped it. Try and add $\omega$ to itself: you fisrt have a copy of $\omega$, and then a second one. It would look like $(\omega + \omega) = \{0,1,2, \dots, \omega, \omega + 1, \omega +2, \dots\}$. With the renaming $0 \mapsto (0;0)$, $1 \mapsto (1;0)$, ..., $\omega \mapsto (0;1)$, $\omega +1 \mapsto (1;1)$, ..., we have an isomorphism between $\omega + \omega$ and $\omega \times 2$.
+				</div>
+				<div class="pict">
+					<img src="pictures/omega-times-two.svg"/>
+				</div>
+				<div class="text">
+					With the same argument, we find out what $\omega \times 3$ and, more generally,  $\omega \times n$, for any $n$ finite, are: it is the concatenation of $n$ infinite ladders. Let's now do the converse: $2 \times \omega$. We already know that, as sets, $2 \times \omega \neq \omega \times 2$, but could they be isomorphic?
+				</div>
+				<div class="large">
+					Sadly, they are not. We have $2 \times \omega := \{(0;0), (1;0), (0;1), (1;1), (0;2), (1;2), \dots\}$, with the order given by $(0;0) < (1;0) < (0;1) < (1;1) < (0;2) < (1;2) < \dots$. You may alreday see that it will only be isomorphic to $\omega$, because of the isomorphism given by $0 \mapsto (0;0)$, $1 \mapsto (1;0)$, $2 \mapsto (0;1)$, ..., $2k \mapsto (0;k)$, $2k+1 \mapsto (1;k)$, ... It may be easier for you to see the inverse renaming, given by the rule $(\varepsilon;k) \mapsto 2k+\varepsilon$. So, as ordinals, $\omega = 2 \times \omega$.
+				</div>
+				<div class="text">
+					We now know how to multiply $\omega$ by any finite ordinal. But what about $\omega \times \omega$? Namely, it is the set of all pairs of elements of $\omega$, ordered with the anti-lexicographic ordering. I here you wonder "is it something akin to $\omega^2$, whatever that means?". Well, yes, but in this case, we need a new operation: exponentiation.
+				</div>
+				<h3>
+					Exponentiation!
+				</h3>
+				<div class="text">
+					No surprise here : first, let's see how it works on finite ordinals (aka natural numbers). Put $n := 2$, $m := 3$ and consider $n^m$. If your intuition whispers "$8$", you're correct. But how to see that ? Well, we consider the set of all triplets (also called $3$-uple) made out of elements of $2$. In other words, that is the set of elements of the form $(a;b;c)$ where $a$, $b$ and $c$ are elements of the set $2$. <span title="Well, here you are: 2^3 := {(0;0;0), (1;0;0), (0;1;0), (1;1;0), (0;0;1), (1;0;1), (0;1;1), (1;1;1)}">I could list it, but I won't.</span>
+				</div>
+				<div class="text">
+					To be extra clear, an element from $2^3$ can be seen as a function from the set $3$ to the set $2$: the element $(0;1;0)$ is the map $0 \mapsto 0$, $1 \mapsto 1$ and $2 \mapsto 0$. To keep the little sanity I still have, let's use notation $a[n]$ to represent the $n$-th element from the uple $a$, that is to say $a(n)$ if we consider $a$ to be a full-on function.
+				</div>
+				<div class="text">
+					Again, we're looking for ordinals, so we need an order on that $2^3$ thing. Let's choose the same as before: the anti-lexicographic ordering. So $(0;0;0)$ is the first element, $(1;0;0)$ the second one, then comes $(0;1;0)$, $(1;1;0)$, ... and finally, $(1;1;1)$.
+				</div>
+				<div class="text">
+					Let's generalize! So, we take $n := \omega$, $m := 2$ and we consider the set of function $f: 2 \to \omega$. And we give it the anti-lexicographic ordering. But what does it even mean? Well, you already know: here, such a function $f$ is wholly defined by its value on $0$ and on $1$; so it looks like the $2$-uple $(f[0];f[1])$. In fact, the set $\omega ^ 2$ is the set of all pairs of numbers.
+				</div>
+				<div class="note">
+					$f : 2 \to \omega$ should be read as "the function $f$ with domain $2$ and codomain $\omega$". In general, we speaking of a function, $S \to T$ is more generally a function from the set $S$ to the set $T$.
+				</div>
+				<div class="text">
+					Anti-lexicographic still means "first compare the right-most coordinates, and then the one to its left (and so on)", so you know how to deal with that. And now, we can count up to $\omega^3$ and even $\omega^n$, with $n$ any finite ordinal.
+				</div>
+				<div class="text">
+					Let's try our new operation on $n := \omega$ and $m := \omega$. So we consider $\omega^\omega$ the set of $\omega$-uple made out of elements of $\omega$, also called "integer sequences", which we'll see as functions $\omega \to \omega$. Although here comes a trap: we cannot use our magical anti-lexicographic ordering in order to have a well-order. Consider the sequence of sequences $u_0 := (1;1;1;1;\dots)$, $u_1 := (0;1;1;1;\dots)$, $u_2 := (0;0;1;1;\dots)$, ... It is a stricly decreasing sequence, the kind we forbid early on.
+				</div>
+				<div class="text">
+					We need a way out. We'll find it by restricting our functions to those with finite support. Here, the support of a given sequence (aka function, aka $\omega$-uple) $f : \omega \to \omega$ is the set of all elements $x$ such that $f[x] \neq 0$. This way, the elements like $u_0$, $u_1$, ... previously defined are not taken into account. This way, there is no stricly decreasing sequence in the set of functions $\omega^\omega$.
+				</div>
+				<div class="note">
+					An other way to express this condition of finite support is to say that any of these sequence eventually stabilize at zero; although this is not a very generalizable. Indeed, if you try and calculate $\omega^{\omega + 1}$, this stabilization condition is not well defined.
+				</div>
+				<div class="note">
+					The set of finitely-supported functions from $\omega$ to $\omega$ is often denoted $\omega^{(\omega)}$. More generally, the set of finitely-supported functions $\alpha \to \beta$, with $\alpha$ and $\beta$ being two ordinals, is denoted $\beta^{(\alpha)}$. It allows to differentiate from the ordinal $\beta$ to the $\alpha$ from the associated set of function.
+				</div>
+				<div class="pict">
+					You may want a drawing of $\omega^\omega$, but sadly, I don't know of any way to represent it. $\omega$ is a ladder, $\omega\times 2$ is two ladders, and so on, $\omega^2$ is a ladder upon which a ladder is attached to every step, $\omega^3$ is a ladder upon which a a copy of $\omega^2$ is attached to every step, and so on. So $\omega^\omega$ is huge.
+				</div>
 			</div>
-			<div class="text">
-				But mathematical objects may not have any color, or <span title="well, as we will find out, sets can have sizes">size</span>. So, if we narrow our study to collections only, this becomes easier. The only properties a collection can have are about ownership: is [something] in our collection? But, what is a collection? Well, as its name seems to indicate, it is a thing that can contains things.
-			</div>
-			<div class="text">
-				Rather, we can accept that a collection is defined by these ownership properties only. Thus, if two collections contains exactly the same things, then they are equal. Moreover, collections being things means that a collection can be in an other one.
-			</div>
-			<div class="dialogue" title="Dialogue with the empty set">
-				Dialogue with the empty set, the collection containing nothing: <br/>
-				- Do you contain [something]? <br/>
-				- No!
-			</div>
-			<div class="text">
-				The thing is, whatever you ask the empty set if they contain it, the answer will always be no. In addition, rather than saying the empty set, we often write \(\emptyset\) or \(\{\}\).
-			</div>
-			<div class="text">
-				Because we assumed the existence of \( \emptyset \), we now have an element : \(\emptyset\). So, we can put it in a collection. Let's consider \(\{\emptyset\}\), the collection containing only \( \emptyset \). Again, it we can talk to them.
-			</div>
-			<div class="dialogue">
-				Dialogue:<br/>
-				- Do you contain an apple?<br/>
-				- No!<br/>
-				- Do you contain \emptyset?<br/>
-				- Yes!
-			</div>
-			<div class="text">
-				So now, we have two different elements : \( \emptyset \) and \( \{ \emptyset \} \). We could build \( \{\{ \emptyset \}\} \). Did we already saw them ? Well, for now, we only saw sets containing \( \emptyset \), never any containing \( \{\emptyset\} \). Since \( \{\emptyset\} \) and \( \emptyset \) are different (one contains \( \emptyset \) and not the other), we never saw \( \{\{\emptyset\}\} \) before. We could continue like that forever : \( \{\{\{ \emptyset \}\}\} \), \( \{\{\{\{ \emptyset \}\}\}\} \), ...
-			</div>
-			<div class="text">
-				We could also take a closer look to \( \{ \emptyset,\{ \emptyset \}\} \). An interview similar to those before yields that they contains two elements: \(\emptyset\) and \( \{ \emptyset \} \).
-			</div>
-			<div class="text">
-				You may ask : what about \( \{ \emptyset, \emptyset \} \)? To what I'd say : but we've already seen them! They contain \( \emptyset \), and nothing else, so they are just \( \{ \emptyset \} \) in disguise.
-			</div>
-			<div class="note">
-				A bit of jargon: rather than "this collection contains this element", we often write \( \mathrm{element} \in \mathrm{collection} \).
-			</div>
-			<div class="note">
-					Note that we can name things. Let's call \( a := \{ \emptyset \} \). Here, \( := \) means "let's give the right-hand part the name on the left-hand". Now, what I've called \( a \) and \( \{ \emptyset \} \) are equal (by definition), but also \( \{ a, \emptyset \} \) and \( \{ \{ \emptyset \}, \emptyset \} \). In that case, we use the symbol \( = \); we could say \( \{ a, \emptyset \} = \{ \{ \emptyset \}, \emptyset \} \)
-			</div>
-			<h3>
-				Sets over collections (an introduction to set theory)
-			</h3>
-			<div class="text">
-				We may seem to be in no position to be unhappy, yet we should. The main issue here is that with no further limitation of what we will consider as a good set, paradoxes are down the road.
-			</div>
-			<div class="text">
-				You may consider the collection of all collection: it contains itself. Weird, but OK. But what about all the collections that does not contain themselves: they form a collection (call it \( A \)). But then, do we have \(A \in A\) or \(A \notin A\)? Well, here is our first issue.
-			</div>
-			<div class="text">
-				In order to adress this, one deals with sets and classes. The former are tamed and quite reasonnable, but the latter are wild and bizarre. A set can be seen as a special class, one that has been built according to some rules. A class is ... a class.
-			</div>
-			<div class="text">
-				The class of all sets exists, but it is not a set. On the other hand, the class of all classes does not exists, because a class can only contain sets.
-			</div>
-		</div>-->
-		<div id="how-to-count">
-		<h2>
-			How to count?
-		</h2>
-		<h3>
-			Orders!
-		</h3>
-			<div class="text">
-				When counting, one gives an order to things. There is the first thing, the second thing, the third thing, ... and sometimes, when there is nothing at all, there is a total of zero things. As you notice, counting in intrinsically bonded to the idea of order.
-			</div>
-			<div class="text">
-				Not any orders, in fact! When dealing with finite sets, only those which are total orders allows to count. By this, we mean orders on a set such that every two elements $a$ and $b$ are in relation: either $a < b$, $a > b$ or $a = b$. This may seem like an unnecessary remark, but the study of partial orders is particularly interesting (but we won't deal with them here).
-			</div>
-			<div class="text">
-				One order is good, but two is better! Consider the usual ones on $\{0,1,2\}$ and $\{3,4,5\}$? They look different, but are pretty similar: they both have elements, both have a first, second and third element and both doesn't have a fourth element. In fact, they are said to be isomorphic, i.e. up to a change of label, they are identical.
-			</div>
-			<div class="text">
-				Before moving on, let's ask ourselves what we like when we count. If we are to generalize counting, we need to get rid of a few properties and, most importantly, to keep some. When we count in the usual set $\mathbb{N}$ of the natural integer, we notice something: every subset $S$ of $\mathbb{N}$ has a least element (i.e. an element less than any other element in $S$). So, we may want to go with that: every order we'll consider will have this property, and we will call them well-orders.
-			</div>
-			<div class="text">
-				We may now try to find a classification of these order, and for each class, a quintessential order. In fact, we'll do the opposite: find the most nominee possible and then hope that every finite total order is isomorphic to some of them.
-			</div>
-			<h3>
-				Numbers?
-			</h3>
-			<div class="text">
-				Let's look at a few particular sets. The zeroth one is $A_0 := \emptyset$, the first one $A_1 := \{\emptyset\}$, the second $A_2 := \{\emptyset, \{\emptyset\}\}$ and the $(n+1)$-th is the set containing all the previous ones, that is $A_{n+1} := \{A_1, A_2, \dots, A_n\}$. You first notice that if $n < m$, then $A_n \in A_m$ (read: $A_n$ is in $A_m$ or $A_m$ is an element of $A_m$).
-			</div>
-			<div class="note">
-				Sidenote here: we often use the notation $a := b$ to say: "let's define $a$ by it being equal to $b$", where $b$ is often complex-looking. This differs from the usual $a = b$ being only a statement: "I state that $a$ and $b$ are equal".
-			</div>
-			<div class="large">
-			  Let's do the converse: let's define an order by saying that $x < y$ if and only if $x \in y$. This may seem overly complex (and complex it is), but bear with me and look at what we've just done. Starting with the empty set, we created a family of thing that behave just like the plain good old natural numbers. So, rather than calling this family $A_0$, $A_1$, $A_2$, $A_3$, ..., let's say that these are the natural numbers, the ones usually called $0$, $1$, $2$, $3$, ...
-			</div>
-			<div class="pict">
-				<img src="pictures/1-2-3-sets.svg" />
-			</div>
-			<div class="note">
-				Here I come to warn you: from now on, things will get weirder and weirder. For instance, with this definition, a number is both an element and a set; $5$ is a set with five ordered elements, but also the greatest element of $6$.This may look like a weaknes or an overly-complex thing to do, but it will have its use.
-			</div>
-			<div class="text">
-				So, why would we do that? Why would we call these things "numbers"? Because saying what a number precisely is is complicated (try it for yourself: how would you define a number?) and here, we just have a nice recipe! To be extra precise, we often call them "ordinal numbers", or simply "ordinals".
-			</div>
-			<div class="note">
-				A closer look at the  process we used to create our natural numbers shows that $n+1 := n \cup \{n\}$. That is, $n+1$ is the union of the set $n$ (so it contains every element that $n$ contains) and of the set containing only $n$. Imagine taking a big box an tossing in it the content of $n$ and then $n$ itself. That big box is now $n+1$.
-			</div>
-			<h3>
-				To infinity!
-			</h3>
-			<div class="text">
-				Now that we can count as high as we want (but please, don't do drugs), we still want more! And here comes the <span class="foreign-language">deus ex machina</span>, the axiom saving us: the collection of all natural numbers is a set. Let's call it $\omega$. Why does its existence matters ? Because, we can apply our number making recipe again and call $s(\omega) := \omega \cup \{\omega\}$ and define $s(s(\omega))$, $s(s(s(\omega)))$, ... the same way.
-			</div>
-			<div class="note">
-				Before we go further, we should notice that what I called $\omega$ may look like what is usually called $\mathbb{N}$. Why naming it differently? Because I swiped a few things under the rug, some weird technicalities, like that we cannot be sure that $\omega$ and $\mathbb{N}$ are exaclty the same object, that $\mathbb{N}$ do is a set and some other odd stuff. You shouldn't care too much about this, because a teacher once told us that "it is a matter of faith".
-			</div>
-			<div class="text">
-				Good, we have new number candidates. But how does they relate to orders ? Well, $\omega$ as a set is like an infinite ladder, with steps going higher and higher, unbounded. $\omega$ as an element is something bigger than any of the previous regular finite natural integer. Then, $s(\omega)$ as a set is like the previous ladder, but with a final step, although this step lacks a predecessor: we somehow have all the natural integers and then, a last element.
-			</div>
-			<div class="pict">
-				<img src="pictures/omega-ladder.svg"/>
-			</div>
-			<div class="text">
-				In fact, I used the notation $\alpha+1$ and $s(\alpha)$ for some ordinals, the former for finite ones and the latter for infinite ones. What is the difference? The latter means "the successor of $\alpha$", while the former is ... unclear?! It may means the same as before for finite ordinals, but what does adding means for infinite ones? As you may have noticed, we don't know how to add infinite things.
-			</div>
-			<h3>
-				Addition
-			</h3>
-			<div class="text">
-				When adding $n$ and $m$, you count "one, two, ..., $n$, $n+1$, ..., $n+m$". In other words, you concatenated the order on $n$ with the one on $m$. We need to be cautious here, because, as we defined earlier, we may have $1 \in n$ and $1 \in m$. So, to unfog any ambiguity, let's call $x'$ the elements of $m$ (and so, $n := \{ 0', 1', 2', \dots, (n-1)'\}$) and and define the new order on $n \cup m$ by saying that every element in $m$ is bigger than any element in $n$.
-			</div>
-			<div class="text">
-				How does that help? Well, because we have a total order on a set, it corresponds to a number: here, $n+m$. For instance, if $n:=2$ and $m:=3$, then the set corresponding to $n+m$ would be $\{0,1,0',1',2'\}$, with the order $0 < 1 < 0' < 1' < 2'$. And this one is isomorphic to the order on $5$ (as a reminder, $5 := \{0,1,2,3,4\}$). So we say that $2 + 3 = 5$.
-			</div>
-			<div class="text">
-				Let's do that, but with $\omega$. Put $n := 1$ and $m := \omega.$ Consider the set $(1 + \omega) := \{0,0',1',2', \dots \}$, ordered with $0 < 0'< 1' < 2' < \dots$. Well, if we do the following renaming : $0 \mapsto 0''$, $0' \mapsto 1''$, $1' \mapsto 2''$, $2' \mapsto 3''$,... we have what I called sooner an isomorphism between  $(1+\omega)$ and $\omega$. Following the logic, we now have $1+ \omega = \omega$. Strange.
-			</div>
-			<div class="text">
-				What if we do the opposite? Put $n := \omega$ and $m := 1$? We find the set $(\omega + 1) := \{0,1,2, \dots, 0'\}$. And by renaming $0 \mapsto 0''$, $1 \mapsto 1''$, ..., $0' \mapsto \omega''$, we have that $(\omega + 1)$ is isomorphic to $s(\omega)$.
-			</div>
-			<div class="text">
-				On one hand, this is comforting: I sooner claimed that $s(\alpha)$ and $\alpha + 1$ are very similar for finite ordinals, and now we have the same result for an infinite one. On the other hand, addition does not seems to be commutative (i.e. $a + b$ is not necessarily equal to $b + a$), and on that, we will need to be very cautious.
-			</div>
-			<div class="text">
-				So, we can work out things like $\omega +2$, $\omega +1312$ and everything that is of the form $\omega + n$, $n$ being a finite number. But what meaning should we give to $\omega + \omega$? Surely, something like "omega, but twice".
-			</div>
-			<h3>
-				Multiplication
-			</h3>
-			<div class="large">
-				Then we need multiplication. Again, lets look at small exemple. Put $n := 2$, $m := 3$ and let's look at $n \times m$. The usual way of doing that is with rectangle, of height $n$ and width $m$. To represent it using sets, we'll do the cartesian product, or set multiplication, between $n$ and $m$; that is the set of all possible pairs. So we have $(n\times m) := \{(0;0), (1;0), (0;1), (1;1), (0;2), (1;2)\}$ or, using the prime notation, $(n'\times m) := \{(0';0), (1';0), (0';1), (1';1), (0';2), (1';2)\}$.
-			</div>
-			<div class="text">
-				Again, we'll now need an order on this set! The convention (and to be clear, it is only a convention, but a really observed one) is to give it the anti-lexicographic order. This barbaric piece of jargon means that the in order to compare two pairs, you first compare the right-most coordinates of the two pairs and then, if they are equal, the coordinates to the left.
-			</div>
-			<div class="note">
-				To be clear, with that mean of ordering in mind, we have $(10,2) > (20,1)$ because $2 > 1$ (and so here, we do not care about the order between $10$ and $20$). We also have $(10,3) < (20,3)$, because $3 = 3$ and then, $10 < 20$. Also, the name lexicographic means "like in a dictionnary", because you compare the first letters of two words and then the second ones, and so on.
-			</div>
-			<div class="large">
-				In our previous example, we thus have the ordering $(0;0) < (1;0) < (0;1) < (1;1) < (0;2) < (1;2)$, which, by a clever renaming, can be seen as the order on $6 = \{0,1,2,3,4,5\}$. We've just seen that $2 \times 3 = 6$. Hurray! Again, we redo this example on $(3 \times 2) := \{(0;0), (1;0), (2;0), (0;1), (1;1), (2;1)\}$. We notice something: $(3 \times 2)$ and $(2 \times 3)$ are two different sets, but happily, they are isomorphic. Now, let's see what happens with $n := \omega$ and $m := 2$.
-			</div>
-			<div class="large">
-				We do have $(n \times m) = \{(0;0), (1;0), (2;0), \dots, (0;1), (1;1), (2;1), \dots , \}$. And about the order on that set ? Well, we have $(0;0) < (1;0)<  (2;0) < \dots < (0;1) < (1;1) < (2;1) < \dots$. Here, you may start to wonder : "Have I ever seen that before?". Well, yes, because it looks like a sum, but no, because I skipped it. Try and add $\omega$ to itself: you fisrt have a copy of $\omega$, and then a second one. It would look like $(\omega + \omega) = \{0,1,2, \dots, \omega, \omega + 1, \omega +2, \dots\}$. With the renaming $0 \mapsto (0;0)$, $1 \mapsto (1;0)$, ..., $\omega \mapsto (0;1)$, $\omega +1 \mapsto (1;1)$, ..., we have an isomorphism between $\omega + \omega$ and $\omega \times 2$.
-			</div>
-			<div class="pict">
-				<img src="pictures/omega-times-two.svg"/>
-			</div>
-			<div class="text">
-				With the same argument, we find out what $\omega \times 3$ and $\omega \times n$, for any $n$ finite, are: it is the concatenation of $n$ infinite ladders. Let's now do the converse: $2 \times \omega$. We already know that, as sets, $2 \times \omega \neq \omega \times 2$, but could they be isomorphic?
-			</div>
-			<div class="large">
-				Sadly, they are not. We have $2 \times \omega := \{(0;0), (1;0), (0;1), (1;1), (0;2), (1;2), \dots\}$, with the order given by $(0;0) < (1;0) < (0;1) < (1;1) < (0;2) < (1;2) < \dots$. You may alreday see that it will only be isomorphic to $\omega$, because of the isomorphism given by $0 \mapsto (0;0)$, $1 \mapsto (1;0)$, $2 \mapsto (0;1)$, ..., $2k \mapsto (0;k)$, $2k+1 \mapsto (1;k)$, ... It may be easier for you to see the inverse renaming, given by the rule $(\varepsilon;k) \mapsto 2k+\varepsilon$.
-			</div>
-			<div class="text">
-				
-			</div>
-		</div>
 		</section>
 	</body>
 </html>
