@@ -26,9 +26,9 @@ h3{
 
 body{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	align-items: center;
 }
 
 #principale{
@@ -103,7 +103,32 @@ body{
 	border-color: var(--couleur-gris-1);
 }
 
-
 span.foreign-language{
 	font-style: italic;
+}
+
+a[href*="wikipedia.org"]{
+	display: inline-flex;
+	flex-direction: row;
+}
+
+a[href*="wikipedia.org"]::after {
+	content: "";
+	background-image: url(pictures/wikipedia-logo.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 1em;
+}
+
+a[href*="wikimedia.org"]{
+	display: inline-flex;
+	flex-direction: row;
+}
+
+a[href*="wikimedia.org"]::after {
+	content: "";
+	background-image: url(pictures/wikimedia-logo.svg);
+	background-repeat: no-repeat;
+	background-size: 75%;
+	width: 1em;
 }
