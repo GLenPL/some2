@@ -4,7 +4,7 @@
      id="omega-ladder"
      sodipodi:docname="omega-ladder.svg"
      inkscape:version="1.1.1 (50ffc5b540, 2022-01-11)"
-     viewBox="0 75 1500 850"
+     viewBox="0 75 1400 400"
      xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
      xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
      xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +68,22 @@
   <g>
     <path
       d="
+        M 1275 425
+        a 25 25 0 0 1 -25 25
+        l -1200 0
+        a 25 25 0 0 1 -25 -25
+        l 0 -300
+        a 25 25 0 0 1 25 -25
+        l 1200 0
+        a 25 25 0 0 1 25 25
+        l 0 100
+      "
+    />
+    <text class="number" x="1250" y="350">&#x03c9;</text>
+  </g>
+  <g>
+    <path
+      d="
         M 1275 875
         a 25 25 0 0 1 -25 25
         l -1200 0
@@ -115,21 +131,5 @@
         l -25 -25 m 0 50 l 25 -25
       "
     />
-  </g>
-  <g>
-    <path
-      d="
-        M 1275 425
-        a 25 25 0 0 1 -25 25
-        l -1200 0
-        a 25 25 0 0 1 -25 -25
-        l 0 -300
-        a 25 25 0 0 1 25 -25
-        l 1200 0
-        a 25 25 0 0 1 25 25
-        l 0 100
-      "
-    />
-    <text class="number" x="1250" y="350">&#x03c9;</text>
   </g>
 </svg>
